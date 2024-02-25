@@ -1,28 +1,30 @@
 <template>
   <div>
-    <NuxtPage />
-    {{ loading }}
+    <NuxtLayout :name="layout">
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 
 <script setup>
-import { useMouse } from '@vueuse/core'
-import { getTest } from '~/api/test'
-import { useAppStore } from '@/store/app'
+const layout = ref('default')
+// import { useMouse } from '@vueuse/core'
+// import { getTest } from '~/api/test'
+// import { useAppStore } from '@/store/app'
 
 // const { x, y } = useMouse();
-const appStore = useAppStore()
-const loading = computed(() => appStore.getLoading)
+// const appStore = useAppStore()
+// const loading = computed(() => appStore.getLoading)
 
-const getTestData = async () => {
-  await useCustomFetch(...getTest(), {
-    success: (res) => {
-      console.log('data', res)
-    }
-  })
-}
+// const getTestData = async () => {
+//   await useCustomFetch(...getTest(), {
+//     success: (res) => {
+//       console.log('data', res)
+//     }
+//   })
+// }
 
-await getTestData()
+// await getTestData()
 
 // watch(
 //   () => x,
