@@ -6,23 +6,23 @@
 </template>
 
 <script setup>
-import { useMouse } from "@vueuse/core";
-import { getTest } from "~/api/test";
-import { useAppStore } from "@/store/app";
+import { useMouse } from '@vueuse/core'
+import { getTest } from '~/api/test'
+import { useAppStore } from '@/store/app'
 
 // const { x, y } = useMouse();
-const appStore = useAppStore();
-const loading = computed(() => appStore.getLoading);
+const appStore = useAppStore()
+const loading = computed(() => appStore.getLoading)
 
 const getTestData = async () => {
   await useCustomFetch(...getTest(), {
     success: (res) => {
-      console.log("data", res);
-    },
-  });
-};
+      console.log('data', res)
+    }
+  })
+}
 
-await getTestData();
+await getTestData()
 
 // watch(
 //   () => x,
