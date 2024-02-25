@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/main.scss', '~/assets/style/style.scss'],
+  css: [
+    '~/assets/main.scss',
+    '~/assets/style/style.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},

@@ -1,6 +1,9 @@
 <template>
   <div>
     <Announcement />
-    <slot />
+    <div class="pt-[36px]">
+      <LoginBar />
+      <slot />
+    </div>
   </div>
 </template>

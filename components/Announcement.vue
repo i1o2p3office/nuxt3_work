@@ -1,5 +1,5 @@
 <template>
-  <div v-if="announcementList.length > 0">
+  <div v-if="announcementList.length > 0" class="fixed top-0 left-0 w-full h-[36px]">
     <swiper
       :navigation="true"
       :modules="module"
@@ -18,7 +18,7 @@
     >
       <swiper-slide v-for="announcement in announcementList">
         <div
-          class="w-full py-1 bg-black text-white font-bold cursor-pointer"
+          class="w-full h-full flex items-center justify-center bg-black text-white font-bold cursor-pointer"
           @click="open(announcement.url)"
         >
           {{ announcement.title }}
