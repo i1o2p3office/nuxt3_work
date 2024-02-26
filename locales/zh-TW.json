@@ -1,5 +1,10 @@
 {
   "front": {
-    "title": "車干的nuxt商店"
+    "title": "車干的nuxt商店",
+    "mainPage": {
+      "bannerButton": "立即購買",
+      "newProduct": "New In",
+      "newButton": "瀏覽全部"
+    }
   }
 }

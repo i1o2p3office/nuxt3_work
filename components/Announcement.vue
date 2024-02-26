@@ -1,5 +1,5 @@
 <template>
-  <div v-if="announcementList.length > 0" class="fixed top-0 left-0 w-full h-[36px]">
+  <div v-if="announcementList.length > 0" class="fixed top-0 left-0 w-full h-[36px] z-30">
     <swiper
       :navigation="true"
       :modules="module"
@@ -41,14 +41,17 @@ import { getAnnouncement } from '~/api/announcement'
 const module = ref([Navigation, Autoplay])
 
 const announcementList = ref([])
-const getAnnouncementList = async () => {
-  await useCustomFetch(...getAnnouncement(), {
-    success: (res) => {
-      announcementList.value = res
-    }
-  })
-}
-getAnnouncementList()
+const test = ref('')
+const { data } = await useFetch(...getAnnouncement())
+announcementList.value = data.value
+// const getAnnouncementList = async () => {
+//   await useCustomFetch(...getAnnouncement(), {
+//     success: (res) => {
+//       announcementList.value = res
+//     }
+//   })
+// }
+// getAnnouncementList()
 
 const open = (url) => {
   if (!url) return

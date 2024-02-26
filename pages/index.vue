@@ -1,4 +1,9 @@
 <template>
-  <!-- <div>{{ $t('front.title') }}</div> -->
-  <!-- <div>{{ $t('back.loginErrpr1000') }}</div> -->
+  <div>
+    <MainPageBanner />
+    <MainPageDiscountText />
+    <MainPageProduct />
+  </div>
 </template>
+
+<script setup></script>

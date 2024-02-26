@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center mt-8 pb-5 border-b border-[#e7e7e7]">
+  <div class="flex justify-center mt-8 pb-5 border-b border-[#e7e7e7] w-full">
     <ul class="flex gap-6">
       <li
         v-for="nav in navList"
@@ -7,11 +7,14 @@
         @mouseover="mouseover(nav)"
         @mouseout="mouseout(nav)"
       >
-        {{ nav.title }} <font-awesome-icon v-if="nav.sub" :icon="['fas', 'angle-down']" />
+        {{ nav.title }}
+        <ClientOnly>
+          <font-awesome-icon v-if="nav.sub" :icon="['fas', 'angle-down']" />
+        </ClientOnly>
         <div
           :ref="(el) => setNavRefMap(el, nav)"
           v-if="nav.sub"
-          class="absolute top-[20px] bg-white duration-300 overflow-hidden"
+          class="absolute top-[20px] bg-white duration-300 overflow-hidden z-20"
           :style="'height: 0px;'"
         >
           <div
@@ -32,14 +35,16 @@
 import { getNav } from '~/api/nav'
 
 const navList = ref([])
-const getNavList = async () => {
-  await useCustomFetch(...getNav(), {
-    success: (res) => {
-      navList.value = res
-    }
-  })
-}
-getNavList()
+const { data } = await useFetch(...getNav())
+navList.value = data.value
+// const getNavList = async () => {
+//   await useCustomFetch(...getNav(), {
+//     success: (res) => {
+//       navList.value = res
+//     }
+//   })
+// }
+// getNavList()
 
 const mouseover = (nav) => {
   if (refSub.value[`sub${nav.id}`]) {
