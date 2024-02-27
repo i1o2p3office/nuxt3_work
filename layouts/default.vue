@@ -6,6 +6,8 @@
       {{ isScrolling }}
       <slot />
     </div>
+    <Footer />
+    <Loading v-if="isLoading" />
   </div>
 </template>
 
@@ -17,6 +19,7 @@ const appStore = useAppStore()
 const el = ref(null)
 const { x: scrollX, y: scrollY } = useWindowScroll(el)
 const currentY = ref(0)
+const isLoading = computed(() => appStore.getLoading)
 
 watch(scrollX, (v) => {
   appStore.setScrollX(v)
@@ -32,4 +35,11 @@ watch(scrollY, (v) => {
   }
   currentY.value = v
 })
+// watch(isLoading, (v) => {
+//   if (v) {
+//     document.body.style.overflow = 'hidden'
+//   } else {
+//     document.body.style.overflow = 'auto'
+//   }
+// })
 </script>

@@ -9,7 +9,17 @@ export default {
     './error.vue'
   ],
   theme: {
-    extend: {}
+    extend: {
+      animation: {
+        loading: 'loading .75s infinite ease-in-out'
+      },
+      keyframes: {
+        loading: {
+          '0%, 100%': { transform: 'scale(.1)' },
+          '30%, 70%': { transform: 'scale(1)' }
+        }
+      }
+    }
   },
   plugins: []
 }

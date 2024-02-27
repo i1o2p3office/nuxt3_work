@@ -14,7 +14,7 @@ const discounts = [1, 0.95, 0.9, 0.8, 0.7, 0.5]
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
   const page = query.page || 1
-  const limit = 6
+  const limit = query.limit || 6
   const products = await generate(page, limit)
   return products
 })

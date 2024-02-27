@@ -1,141 +1,116 @@
 export default defineEventHandler(async (event) => {
   return [
-    {
-      id: 1,
-      title: 'Home',
-      url: '/'
-    },
+    // {
+    //   id: 1,
+    //   title: 'Home'
+    // },
     {
       id: 2,
-      title: 'ALL',
-      url: '/category/all'
+      title: 'ALL'
     },
     {
       id: 3,
       title: 'Man / Unisex',
       sub: [
         {
-          id: 1,
-          title: 'T-Shirts & Vest',
-          url: '/category/1'
-        },
-        {
-          id: 2,
-          title: 'Hoodies & Sweatshirts',
-          url: '/category/2'
-        },
-        {
-          id: 3,
-          title: 'Jackets & Coats',
-          url: '/category/3'
-        },
-        {
           id: 4,
-          title: 'Jeans',
-          url: '/category/4'
+          title: 'T-Shirts & Vest'
         },
         {
           id: 5,
-          title: 'Trousers & Chinos',
-          url: '/category/5'
+          title: 'Hoodies & Sweatshirts'
         },
         {
           id: 6,
-          title: 'Shorts',
-          url: '/category/6'
+          title: 'Jackets & Coats'
         },
         {
           id: 7,
-          title: 'Shirts',
-          url: '/category/7'
+          title: 'Jeans'
         },
         {
           id: 8,
-          title: 'Suits & Blazers',
-          url: '/category/8'
+          title: 'Trousers & Chinos'
         },
         {
           id: 9,
-          title: 'Underwear & Socks',
-          url: '/category/9'
+          title: 'Shorts'
         },
         {
           id: 10,
-          title: 'Accessories',
-          url: '/category/10'
+          title: 'Shirts'
+        },
+        {
+          id: 11,
+          title: 'Suits & Blazers'
+        },
+        {
+          id: 12,
+          title: 'Underwear & Socks'
+        },
+        {
+          id: 13,
+          title: 'Accessories'
         }
       ]
     },
     {
-      id: 4,
-      title: 'Women/Unisex',
+      id: 14,
+      title: 'Women / Unisex',
       sub: [
         {
-          id: 1,
-          title: 'T-Shirts & Vest',
-          url: '/category/1'
+          id: 15,
+          title: 'T-Shirts & Vest'
         },
         {
-          id: 2,
-          title: 'Hoodies & Sweatshirts',
-          url: '/category/2'
+          id: 16,
+          title: 'Hoodies & Sweatshirts'
         },
         {
-          id: 3,
-          title: 'Jackets & Coats',
-          url: '/category/3'
+          id: 17,
+          title: 'Jackets & Coats'
         },
         {
-          id: 4,
-          title: 'Jeans',
-          url: '/category/4'
+          id: 18,
+          title: 'Jeans'
         },
         {
-          id: 5,
-          title: 'Trousers & Chinos',
-          url: '/category/5'
+          id: 19,
+          title: 'Trousers & Chinos'
         },
         {
-          id: 6,
-          title: 'Shorts',
-          url: '/category/6'
+          id: 20,
+          title: 'Shorts'
         },
         {
-          id: 7,
-          title: 'Shirts',
-          url: '/category/7'
+          id: 21,
+          title: 'Shirts'
         },
         {
-          id: 8,
-          title: 'Suits & Blazers',
-          url: '/category/8'
+          id: 22,
+          title: 'Suits & Blazers'
         },
         {
-          id: 9,
-          title: 'Underwear & Socks',
-          url: '/category/9'
+          id: 23,
+          title: 'Underwear & Socks'
         },
         {
-          id: 10,
-          title: 'Accessories',
-          url: '/category/10'
+          id: 24,
+          title: 'Accessories'
         }
       ]
     },
     {
-      id: 5,
-      title: '現貨區',
-      url: '/category/spot-goods'
+      id: 25,
+      title: '現貨區'
     },
     {
-      id: 6,
-      title: '【SALE】',
-      url: '/category/sale'
-    },
-    {
-      id: 7,
-      title: 'How To Buy',
-      url: '/category/qa'
+      id: 26,
+      title: '【SALE】'
     }
+    // {
+    //   id: 7,
+    //   title: 'How To Buy'
+    // }
   ]
 })

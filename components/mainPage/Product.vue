@@ -15,9 +15,9 @@
         />
       </div>
       <div class="flex justify-center w-full py-16">
-        <button class="bg-black text-white font-bold px-8 py-3">
+        <NuxtLink to="/category/1" class="bg-black text-white font-bold px-8 py-3">
           {{ $t('front.mainPage.newButton') }}
-        </button>
+        </NuxtLink>
       </div>
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-3 w-full">

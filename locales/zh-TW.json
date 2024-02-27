@@ -1,10 +1,40 @@
 {
   "front": {
     "title": "車干的nuxt商店",
+    "home": "首頁",
     "mainPage": {
       "bannerButton": "立即購買",
       "newProduct": "New In",
-      "newButton": "瀏覽全部"
+      "newButton": "瀏覽全部",
+      "contactUs": "聯絡我們"
+    },
+    "category": {
+      "1": "New In",
+      "2": "ALL",
+      "3": "Man / Unisex",
+      "4": "T-Shirts & Vest",
+      "5": "Hoodies & Sweatshirts",
+      "6": "Jackets & Coats",
+      "7": "Jeans",
+      "8": "Trousers & Chinos",
+      "9": "Shorts",
+      "10": "Shirts",
+      "11": "Suits & Blazers",
+      "12": "Underwear & Socks",
+      "13": "Accessories",
+      "14": "Women / Unisex",
+      "15": "T-Shirts & Vest",
+      "16": "Hoodies & Sweatshirts",
+      "17": "Jackets & Coats",
+      "18": "Jeans",
+      "19": "Trousers & Chinos",
+      "20": "Shorts",
+      "21": "Shirts",
+      "22": "Suits & Blazers",
+      "23": "Underwear & Socks",
+      "24": "Accessories",
+      "25": "現貨區",
+      "26": "【SALE】"
     }
   }
 }
