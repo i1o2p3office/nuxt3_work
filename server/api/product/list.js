@@ -25,7 +25,7 @@ function generate(page, limit) {
     let total = 1000
     let maxPage = Math.ceil(total / limit)
     let products = []
-    for (let i = page; i <= limit * page; i++) {
+    for (let i = 1; i <= limit; i++) {
       let product_name = productNames[Math.floor(Math.random() * productNames.length)]
       let discount = discounts[Math.floor(Math.random() * discounts.length)]
       let originalPrice = Math.floor(useRandomInt(1, 25)) * 100
