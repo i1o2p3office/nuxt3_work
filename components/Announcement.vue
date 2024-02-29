@@ -41,7 +41,6 @@ import { getAnnouncement } from '~/api/announcement'
 const module = ref([Navigation, Autoplay])
 
 const announcementList = ref([])
-const test = ref('')
 const { data } = await useFetch(...getAnnouncement())
 announcementList.value = data.value
 // const getAnnouncementList = async () => {

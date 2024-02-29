@@ -3,7 +3,6 @@
     <Announcement />
     <div class="pt-[36px]">
       <LoginBar />
-      {{ isScrolling }}
       <slot />
     </div>
     <Footer />

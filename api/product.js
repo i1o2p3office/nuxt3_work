@@ -11,3 +11,7 @@ export function getHotProduct(page) {
 export function getList(page, limit, category) {
   return request(`/api/product/list`, 'GET', { page, limit, category })
 }
+
+export function getProduct(id) {
+  return request(`/api/product/getOnly`, 'GET', { id })
+}

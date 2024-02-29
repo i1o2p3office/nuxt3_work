@@ -5,11 +5,11 @@
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12">
         <ProductBox
           v-for="n in newList"
-          :key="n.id"
+          :pid="n.pid"
           :img="n.img"
           :imgSub="n.imgSub"
           :name="n.name"
-          :Rebate="n.Rebate"
+          :rebate="n.Rebate"
           :originalPrice="n.originalPrice"
           :price="n.price"
         />

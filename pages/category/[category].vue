@@ -6,11 +6,11 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 mb-8">
       <ProductBox
         v-for="l in list.data"
-        :key="l.id"
+        :pid="l.pid"
         :img="l.img"
         :imgSub="l.imgSub"
         :name="l.name"
-        :Rebate="l.Rebate"
+        :rebate="l.Rebate"
         :originalPrice="l.originalPrice"
         :price="l.price"
       />

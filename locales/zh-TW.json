@@ -8,6 +8,15 @@
       "newButton": "瀏覽全部",
       "contactUs": "聯絡我們"
     },
+    "product": {
+      "size": "尺寸",
+      "color": "顏色",
+      "stock": "庫存",
+      "soldOut": "已售完",
+      "info": "商品資訊",
+      "desc": "商品描述",
+      "count": "數量"
+    },
     "category": {
       "1": "New In",
       "2": "ALL",
