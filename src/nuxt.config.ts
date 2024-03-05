@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/main.scss',
     '~/assets/style/style.scss',
+    '~/assets/style/transition.scss',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   postcss: {

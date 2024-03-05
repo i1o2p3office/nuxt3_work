@@ -12,7 +12,7 @@
       <div class="flex justify-end items-center gap-5 text-lg">
         <ClientOnly>
           <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="cursor-pointer" />
-          <font-awesome-icon :icon="['fas', 'user']" class="cursor-pointer" />
+          <font-awesome-icon @click="openLogin" :icon="['fas', 'user']" class="cursor-pointer" />
           <font-awesome-icon :icon="['fas', 'cart-shopping']" class="cursor-pointer" />
         </ClientOnly>
       </div>
@@ -23,6 +23,7 @@
 
 <script setup>
 import { useAppStore } from '@/store/app'
+import Login from '@/components/dialogs/Login'
 
 const router = useRouter()
 const appStore = useAppStore()
@@ -32,6 +33,14 @@ const loginBoxHeight = ref(0)
 
 const goHome = () => {
   router.push('/')
+}
+
+const openLogin = () => {
+  appStore.setDialogs({
+    name: 'login',
+    component: Login,
+    width: '50%'
+  })
 }
 
 onMounted(() => {

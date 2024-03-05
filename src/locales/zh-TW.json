@@ -44,6 +44,11 @@
       "24": "Accessories",
       "25": "現貨區",
       "26": "【SALE】"
+    },
+    "login": {
+      "title": "登入",
+      "accountPlaceholder": "請輸入帳號 (Email)",
+      "passwordPlaceholder": "請輸入密碼"
     }
   }
 }

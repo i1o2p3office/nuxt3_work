@@ -6,7 +6,8 @@ export const useAppStore = defineStore('app', {
     loading: false,
     scrollX: 0,
     scrollY: 0,
-    isScrollTop: false
+    isScrollTop: false,
+    dialogs: []
   }),
   actions: {
     setLoading(loading) {
@@ -20,12 +21,19 @@ export const useAppStore = defineStore('app', {
     },
     setIsScrollTop(isScrollTop) {
       this.isScrollTop = isScrollTop
+    },
+    setDialogs(dialog) {
+      this.dialogs.push(dialog)
+    },
+    deleteDialogs(name) {
+      this.dialogs = this.dialogs.filter((d) => d.name !== name)
     }
   },
   getters: {
     getLoading: (state) => state.loading,
     getScrollX: (state) => state.scrollX,
     getScrollY: (state) => state.scrollY,
-    getIsScrollTop: (state) => state.isScrollTop
+    getIsScrollTop: (state) => state.isScrollTop,
+    getDialogs: (state) => state.dialogs
   }
 })

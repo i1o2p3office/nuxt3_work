@@ -8,6 +8,10 @@ body {
   font-family: 'Arimo', sans-serif;
 }
 
+input {
+  @apply border border-[#b1b1b1] p-1 pl-4 placeholder:text-sm;
+}
+
 .swiper {
   width: 100%;
   height: 100%;

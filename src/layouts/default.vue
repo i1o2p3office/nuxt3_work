@@ -1,12 +1,27 @@
 <template>
   <div ref="el">
+    <!-- 至頂優惠訊息 -->
     <Announcement />
+    <!-- 因至頂優惠高度36px -->
     <div class="pt-[36px]">
+      <!-- 登入bar -->
       <LoginBar />
+      <!-- 頁面pages -->
       <slot />
     </div>
+    <!-- footer -->
     <Footer />
+    <!-- loading -->
     <Loading v-if="isLoading" />
+    <!-- 彈出視窗 -->
+    <TransitionGroup name="nested">
+      <component
+        v-for="d in dialogs"
+        :is="d.component"
+        :data="d.data"
+        @closeDialogs="closeDialogs(d.name)"
+      ></component>
+    </TransitionGroup>
   </div>
 </template>
 
@@ -19,6 +34,11 @@ const el = ref(null)
 const { x: scrollX, y: scrollY } = useWindowScroll(el)
 const currentY = ref(0)
 const isLoading = computed(() => appStore.getLoading)
+const dialogs = computed(() => appStore.getDialogs)
+
+const closeDialogs = (name) => {
+  appStore.deleteDialogs(name)
+}
 
 watch(scrollX, (v) => {
   appStore.setScrollX(v)

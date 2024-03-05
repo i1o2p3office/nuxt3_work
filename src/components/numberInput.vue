@@ -5,7 +5,7 @@
       class="cursor-pointer"
       @click="updateCount('minus')"
     />
-    <input v-model="thisCount" class="w-10 text-center border-0" />
+    <input v-model="thisCount" class="w-10 text-center border-0 !pl-0" />
     <font-awesome-icon
       :icon="['fas', 'plus']"
       class="cursor-pointer"
