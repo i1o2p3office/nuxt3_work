@@ -1,5 +1,6 @@
 <template>
-  <div class="dialog-mask" @click.self="closeDialogs">
+  <div class="dialog-mask">
+    <div class="absolute w-full h-full bg-black opacity-90 z-[-1]" @click.self="closeDialogs"></div>
     <!-- 內容 -->
     <div class="dialog-container w-full lg:w-1/3 xl:w-1/4">
       <!-- 標題 -->

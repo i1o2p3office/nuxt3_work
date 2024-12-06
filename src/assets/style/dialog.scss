@@ -1,6 +1,6 @@
 .dialog-mask {
-  @apply fixed top-0 left-0 w-full h-full flex items-start justify-center pt-20 px-2 z-[9999];
+  @apply fixed top-0 left-0 w-full h-full flex items-start justify-center px-2 z-[9999];
   .dialog-container {
-    @apply bg-white rounded-lg shadow-lg border border-[#b1b1b1] p-5 animate-dialog-nested;
+    @apply bg-white rounded-lg shadow-lg border border-[#b1b1b1] mt-20 p-5 animate-dialog-nested;
   }
 }
