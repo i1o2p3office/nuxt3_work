@@ -2,6 +2,7 @@
   "front": {
     "title": "車干的nuxt商店",
     "home": "首頁",
+    "addedToCart": "已加入購物車",
     "mainPage": {
       "bannerButton": "立即購買",
       "newProduct": "New In",
@@ -15,7 +16,8 @@
       "soldOut": "已售完",
       "info": "商品資訊",
       "desc": "商品描述",
-      "count": "數量"
+      "count": "數量",
+      "addCart": "加入購物車"
     },
     "category": {
       "1": "New In",

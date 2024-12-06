@@ -27,7 +27,7 @@ function generate(page, limit) {
       let discount = discounts[Math.floor(Math.random() * discounts.length)]
       let originalPrice = Math.floor(useRandomInt(1, 25)) * 100
       products.push({
-        pid: i,
+        pid: parseInt(i),
         name: product_name,
         price: Math.ceil(originalPrice * discount),
         originalPrice: originalPrice,

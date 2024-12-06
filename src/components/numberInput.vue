@@ -1,16 +1,20 @@
 <template>
   <div class="flex items-center justify-between border border-[#d3d3d3] p-3">
-    <font-awesome-icon
-      :icon="['fas', 'minus']"
-      class="cursor-pointer"
-      @click="updateCount('minus')"
-    />
+    <ClientOnly>
+      <font-awesome-icon
+        :icon="['fas', 'minus']"
+        class="cursor-pointer"
+        @click="updateCount('minus')"
+      />
+    </ClientOnly>
     <input v-model="thisCount" class="w-10 text-center border-0 !pl-0" />
-    <font-awesome-icon
-      :icon="['fas', 'plus']"
-      class="cursor-pointer"
-      @click="updateCount('plus')"
-    />
+    <ClientOnly>
+      <font-awesome-icon
+        :icon="['fas', 'plus']"
+        class="cursor-pointer"
+        @click="updateCount('plus')"
+      />
+    </ClientOnly>
   </div>
 </template>
 

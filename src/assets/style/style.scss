@@ -34,3 +34,23 @@ input {
   height: 100%;
   object-fit: cover;
 }
+
+button:disabled {
+  @apply cursor-not-allowed bg-[#cfcfcf] text-[#636363];
+}
+
+.notifys {
+  @apply fixed z-50 w-80 max-w-80 right-3 bottom-5;
+}
+.notifys-enter-active,
+.notifys-leave-active {
+  transition: all 0.5s ease;
+}
+.notifys-enter-from,
+.notifys-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.notifys li {
+  @apply mb-1;
+}

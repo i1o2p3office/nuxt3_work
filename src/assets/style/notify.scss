@@ -1,0 +1,34 @@
+.notify {
+	@apply relative p-3 text-nowrap text-base rounded;
+	.progress {
+		@apply absolute duration-200 w-0 h-[2px] bottom-0 left-0;
+	}
+}
+
+.info {
+	@apply bg-[#e8f4ff] border-[#d1e9ff] text-[#1890ff];
+	.progress {
+		@apply bg-[#1890ff];
+	}
+}
+
+.success {
+	@apply bg-[#e7faf0] border-[#d0f5e0] text-[#13ce66];
+	.progress {
+		@apply bg-[#13ce66];
+	}
+}
+
+.warning {
+	@apply bg-[#fff8e6] border-[#fff1cc] text-[#ffba00];
+	.progress {
+		@apply bg-[#ffba00];
+	}
+}
+
+.error {
+	@apply bg-[#ffeded] border-[#ffdbdb] text-[#ff4949];
+	.progress {
+		@apply bg-[#ff4949];
+	}
+}

@@ -57,6 +57,15 @@
             <div class="w-[120px]">
               <numberInput v-model:count="select.count" :max="productData.stock" />
             </div>
+            <div class="flex">
+              <button
+                class="w-full py-2 bg-black text-white font-bold rounded-full"
+                :disabled="productData.stock === 0"
+                @click="addCart"
+              >
+                {{ $t('front.product.addCart') }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -66,9 +75,12 @@
 
 <script setup>
 import { computed, watch } from 'vue'
+import { useAppStore } from '@/store/app'
 import { getProduct } from '~/api/product'
 
 const route = useRoute()
+const appStore = useAppStore()
+const { t } = useI18n()
 const productData = ref({
   img: [],
   price: 0,
@@ -101,6 +113,13 @@ const getData = async () => {
         select.value.count = 1
       }
     }
+  })
+}
+
+const addCart = () => {
+  appStore.setNotifys({
+    type: 'success',
+    message: t('front.addedToCart')
   })
 }
 

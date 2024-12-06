@@ -12,7 +12,9 @@
     <!-- footer -->
     <Footer />
     <!-- loading -->
-    <Loading v-if="isLoading" />
+    <ClientOnly>
+      <Loading v-if="isLoading" />
+    </ClientOnly>
     <!-- 彈出視窗 -->
     <TransitionGroup name="nested">
       <component
@@ -21,6 +23,14 @@
         :data="d.data"
         @closeDialogs="closeDialogs(d.name)"
       ></component>
+    </TransitionGroup>
+    <TransitionGroup name="notifys" tag="ul" class="notifys">
+      <Notify
+        v-for="n in notifys"
+        :key="n.uuid"
+        :data="n"
+        @closeNotifys="closeNotifys(n.uuid)"
+      />
     </TransitionGroup>
   </div>
 </template>
@@ -35,9 +45,14 @@ const { x: scrollX, y: scrollY } = useWindowScroll(el)
 const currentY = ref(0)
 const isLoading = computed(() => appStore.getLoading)
 const dialogs = computed(() => appStore.getDialogs)
+const notifys = computed(() => appStore.getNotifys)
 
 const closeDialogs = (name) => {
   appStore.deleteDialogs(name)
+}
+
+const closeNotifys = (i) => {
+  appStore.deleteNotifys(i)
 }
 
 watch(scrollX, (v) => {
